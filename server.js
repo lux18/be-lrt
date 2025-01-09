@@ -4,6 +4,7 @@ const port = 5000;
 const db = require("./config/database");
 const path = require("path");
 const cors = require("cors");
+require("dotenv").config();
 
 app.use(express.json());
 app.use(cors());
