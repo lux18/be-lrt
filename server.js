@@ -7,7 +7,13 @@ const cors = require("cors");
 require("dotenv").config();
 
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://fe-lrt.vercel.app",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+  }),
+);
 app.use(express.urlencoded({ extended: true }));
 
 const reportRoutes = require("./router/laporanRoute");
