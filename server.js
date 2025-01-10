@@ -7,11 +7,7 @@ const cors = require("cors");
 require("dotenv").config();
 
 app.use(express.json());
-app.use(
-  cors({
-    origin: "http://localhost:3000/",
-  }),
-);
+app.options("*", cors());
 app.use(express.urlencoded({ extended: true }));
 
 const reportRoutes = require("./router/laporanRoute");
