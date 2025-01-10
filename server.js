@@ -9,9 +9,7 @@ require("dotenv").config();
 app.use(express.json());
 app.use(
   cors({
-    origin: "https://fe-lrt.vercel.app",
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    allowedHeaders: ["Content-Type", "Authorization"],
+    origin: "http://localhost:3000/",
   }),
 );
 app.use(express.urlencoded({ extended: true }));
